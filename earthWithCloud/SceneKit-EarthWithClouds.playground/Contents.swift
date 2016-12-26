@@ -5,7 +5,7 @@ import PlaygroundSupport
 
 /*: SceneKit Sample- Earth with Clouds
 # Introduction
- In this sample I have animated Earth globe with clouds using SceneKit.
+ In this sample I have animated globe with clouds using SceneKit.
  **Note**
 This playground is based on the code and resources provided in the WWDC 2013 - SceneKit session sample code which is available for free to download. My aim is to make small samples out of that presentation.
 */
