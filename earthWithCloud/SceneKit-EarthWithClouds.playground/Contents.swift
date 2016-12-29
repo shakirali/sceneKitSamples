@@ -19,7 +19,7 @@ sceneView.backgroundColor = UIColor.black
 // start a live preview of that view
 PlaygroundPage.current.liveView = sceneView
 
-// 3. default lighting
+// default lighting
 sceneView.autoenablesDefaultLighting = true
 
 //camera
@@ -27,6 +27,16 @@ var cameraNode = SCNNode()
 cameraNode.camera = SCNCamera()
 cameraNode.position = SCNVector3(x: 0, y: 0, z: 15)
 scene.rootNode.addChildNode(cameraNode)
+
+//earth node
+let earthNode = SCNNode()
+earthNode.geometry = SCNSphere(radius: 5)
+earthNode.opacity = 1.0
+earthNode.position = SCNVector3(0, 0, 0)
+
+
+//let transform3D = CATransform3DMakeRotation(CGFloat(M_PI * 0.1), 1, 0, 0)
+//earthNode.pivot = SCNMatrix4.makeSCNMatrix4(from: transform3D)
 
 //cloud node
 let cloudNode = SCNNode()
@@ -36,13 +46,6 @@ cloudNode.geometry?.firstMaterial?.transparent.contents = UIImage(named: "clouds
 cloudNode.geometry?.firstMaterial?.transparencyMode = .rgbZero
 cloudNode.geometry?.firstMaterial?.transparency = 1.0
 
-//earth node
-let earthNode = SCNNode()
-earthNode.geometry = SCNSphere(radius: 5)
-earthNode.opacity = 1.0
-earthNode.position = SCNVector3(0, 0, 0)
-let transform3D = CATransform3DMakeRotation(CGFloat(M_PI * 0.1), 1, 0, 0)
-earthNode.pivot = SCNMatrix4.makeSCNMatrix4(from: transform3D)
 
 //add cloud node
 earthNode.addChildNode(cloudNode)
