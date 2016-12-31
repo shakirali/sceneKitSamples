@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hdr-m0-rcD">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="NBm-t5-2p9">
+            <objects>
+                <viewController id="hdr-m0-rcD" customClass="GameViewController" customModule="MySceneKitPresentation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="syr-Ed-Gsu"/>
+                        <viewControllerLayoutGuide type="bottom" id="gCk-bd-Ca7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ABs-pG-i12" userLabel="SceneView" customClass="SCNView">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NZD-CY-6J4" userLabel="Features">
+                                <rect key="frame" x="525" y="28.5" width="122" height="318"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iTL-IC-X6w" userLabel="Diffuse">
+                                        <rect key="frame" x="0.0" y="0.0" width="122" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diffuse" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jec-7i-fNW">
+                                                <rect key="frame" x="0.0" y="6.5" width="68" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" red="0.17246800509999999" green="0.37278267380000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="fill" translatesAutoresizingMaskIntoConstraints="NO" id="jNu-4u-Hfs">
+                                                <rect key="frame" x="73" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="diffuseValueChangedWithSender:" destination="hdr-m0-rcD" eventType="valueChanged" id="iSl-hb-H87"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Kln-s6-1Mq" userLabel="Ambient">
+                                        <rect key="frame" x="0.0" y="41" width="122" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ambient" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZT-bE-aOS">
+                                                <rect key="frame" x="0.0" y="6.5" width="68" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" red="0.17246800509999999" green="0.37278267380000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="I85-Md-X8D">
+                                                <rect key="frame" x="73" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="ambientValueChangedWithSender:" destination="hdr-m0-rcD" eventType="valueChanged" id="DKN-2H-aS4"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="woS-mH-Wfz" userLabel="Specular">
+                                        <rect key="frame" x="0.0" y="82" width="122" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Specular" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w83-FH-CJt">
+                                                <rect key="frame" x="0.0" y="6.5" width="68" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" red="0.17246800509999999" green="0.37278267380000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="mKI-PN-OjF">
+                                                <rect key="frame" x="73" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="specularValueChangedWithSender:" destination="hdr-m0-rcD" eventType="valueChanged" id="scX-Hz-Jxz"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4NZ-HW-Y33" userLabel="Reflective">
+                                        <rect key="frame" x="0.0" y="123" width="122" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reflective" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U60-Qk-sqt">
+                                                <rect key="frame" x="0.0" y="6.5" width="68" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" red="0.17246800509999999" green="0.37278267380000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2wC-Ce-9Tl">
+                                                <rect key="frame" x="73" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="reflectiveValueChangedWithSender:" destination="hdr-m0-rcD" eventType="valueChanged" id="IV4-f1-bGB"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="17j-7O-94F" userLabel="Normal">
+                                        <rect key="frame" x="0.0" y="164" width="122" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Normal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydw-q6-LQb" userLabel="Normal">
+                                                <rect key="frame" x="0.0" y="0.0" width="73" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.17246800509999999" green="0.37278267380000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QT8-1q-C4T">
+                                                <rect key="frame" x="73" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="normalValueChangedWithSender:" destination="hdr-m0-rcD" eventType="valueChanged" id="cJG-s8-Xnp"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4bd-N3-CS0" userLabel="Emissive">
+                                        <rect key="frame" x="0.0" y="205" width="122" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emissive" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DUC-xn-Q2p">
+                                                <rect key="frame" x="0.0" y="0.0" width="68" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" red="0.17246800509999999" green="0.37278267380000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Dtr-1C-iQg">
+                                                <rect key="frame" x="73" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="emissiveValueChangedWithSender:" destination="hdr-m0-rcD" eventType="valueChanged" id="kXF-ex-e52"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ccg-AC-reG" userLabel="Color">
+                                        <rect key="frame" x="0.0" y="246" width="122" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9EI-4u-g43">
+                                                <rect key="frame" x="0.0" y="0.0" width="73" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" red="0.17246800509999999" green="0.37278267380000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="orG-UE-ozL">
+                                                <rect key="frame" x="73" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="applyColorValueChangedWithSender:" destination="hdr-m0-rcD" eventType="valueChanged" id="g9s-zm-GMH"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1rY-e9-YJ9" userLabel="Cloud">
+                                        <rect key="frame" x="0.0" y="287" width="122" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cloud" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDb-sd-Pr6">
+                                                <rect key="frame" x="0.0" y="0.0" width="73" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" red="0.17246800509999999" green="0.37278267380000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eNx-jl-56K">
+                                                <rect key="frame" x="73" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="cloudNodeValueChangedWithSender:" destination="hdr-m0-rcD" eventType="valueChanged" id="yXe-aF-5jA"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NZD-CY-6J4" firstAttribute="centerY" secondItem="ABs-pG-i12" secondAttribute="centerY" id="RCO-Sc-cAi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NZD-CY-6J4" secondAttribute="trailing" id="lEa-hq-TT7"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="792-MN-TG9" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.18140929535232" y="136.80000000000001"/>
+        </scene>
+    </scenes>
+</document>
