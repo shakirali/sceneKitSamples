@@ -33,10 +33,12 @@ let earthNode = SCNNode()
 earthNode.geometry = SCNSphere(radius: 5)
 earthNode.opacity = 1.0
 earthNode.position = SCNVector3(0, 0, 0)
+let transform3D = CATransform3DMakeRotation(CGFloat(M_PI * 0.1), 1, 0, 0)
+earthNode.pivot = SCNMatrix4.makeSCNMatrix4(from: transform3D)
 
+//add node to scene
+scene.rootNode.addChildNode(earthNode)
 
-//let transform3D = CATransform3DMakeRotation(CGFloat(M_PI * 0.1), 1, 0, 0)
-//earthNode.pivot = SCNMatrix4.makeSCNMatrix4(from: transform3D)
 
 //cloud node
 let cloudNode = SCNNode()
@@ -83,5 +85,3 @@ rotation.duration = 100.0
 cloudNode.addAnimation(rotation, forKey: nil)
 
 
-//add node to scene
-scene.rootNode.addChildNode(earthNode)
