@@ -1,4 +1,4 @@
-# Globe with clouds
+# Earth with clouds
 In this sample I display a globe with clouds around it.   
 **Note** I have used code and images from the WWDC 2013 - SceneKit session.
 
